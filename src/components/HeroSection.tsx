@@ -21,44 +21,37 @@ const techBadges = [
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-20">
-      {/* Background effects */}
       <div className="absolute inset-0 bg-glow" />
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-primary/8 rounded-full blur-3xl" />
-      
+
       <div className="container relative z-10">
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
-          {/* Profile Photo */}
           <div className="relative mb-8 animate-fade-in">
             <div className="w-36 h-36 md:w-44 md:h-44 rounded-full overflow-hidden border-4 border-primary/40 animate-pulse-glow">
-              <img 
-                src={profilePhoto} 
+              <img
+                src={profilePhoto}
                 alt="Utemberg Moisés"
                 className="w-full h-full object-cover"
               />
             </div>
-            {/* Status indicator */}
             <div className="absolute bottom-2 right-2 w-5 h-5 bg-accent rounded-full border-4 border-background" />
           </div>
 
-          {/* Name */}
           <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-4 animate-fade-in" style={{ animationDelay: "0.1s" }}>
             <span className="text-foreground">Utemberg</span>{" "}
             <span className="text-gradient">Moisés</span>
           </h1>
 
-          {/* Title Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/30 mb-2 animate-fade-in" style={{ animationDelay: "0.15s" }}>
             <BarChart3 className="w-4 h-4 text-primary-glow" />
             <span className="text-sm font-medium text-foreground">Analista de Dados</span>
           </div>
 
-          {/* Location */}
           <div className="flex items-center gap-2 text-muted-foreground text-sm mb-8 animate-fade-in" style={{ animationDelay: "0.15s" }}>
             <MapPin className="w-4 h-4" />
             <span>Mossoró – Rio Grande do Norte, Brasil</span>
           </div>
 
-          {/* Highlights List */}
           <ul className="space-y-3 mb-8 animate-fade-in" style={{ animationDelay: "0.2s" }}>
             {highlights.map((item, index) => (
               <li key={index} className="flex items-center gap-3 text-muted-foreground">
@@ -68,7 +61,6 @@ const HeroSection = () => {
             ))}
           </ul>
 
-          {/* Tech Badges */}
           <div className="flex flex-wrap justify-center gap-2 mb-10 animate-fade-in" style={{ animationDelay: "0.25s" }}>
             {techBadges.map((tech) => (
               <span
@@ -80,25 +72,40 @@ const HeroSection = () => {
             ))}
           </div>
 
-          {/* CTA Buttons */}
+          {/* 🔧 CORREÇÃO APLICADA APENAS AQUI */}
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: "0.3s" }}>
             <Button
               asChild
               size="lg"
               className="bg-primary hover:bg-primary-glow text-primary-foreground font-semibold px-8 py-6 text-base glow-effect transition-all duration-300"
             >
-              <a href="#projetos" className="inline-flex items-center gap-2">
+              <a
+                href="#projetos"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById("projetos")?.scrollIntoView({ behavior: "smooth", block: "start" });
+                }}
+                className="inline-flex items-center gap-2"
+              >
                 <LineChart className="w-5 h-5" />
                 Ver Projetos
               </a>
             </Button>
+
             <Button
               asChild
               variant="outline"
               size="lg"
               className="border-primary/40 text-foreground hover:bg-primary/10 px-8 py-6 text-base transition-all duration-300"
             >
-              <a href="#sobre-mim" className="inline-flex items-center gap-2">
+              <a
+                href="#sobre-mim"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById("sobre-mim")?.scrollIntoView({ behavior: "smooth", block: "start" });
+                }}
+                className="inline-flex items-center gap-2"
+              >
                 Sobre mim
                 <ChevronDown className="w-5 h-5" />
               </a>
@@ -107,7 +114,6 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Floating icons decoration */}
       <div className="absolute top-1/4 left-10 opacity-20 animate-float hidden lg:block">
         <Database className="w-12 h-12 text-primary" />
       </div>
