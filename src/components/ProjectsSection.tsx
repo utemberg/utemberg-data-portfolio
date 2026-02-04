@@ -3,7 +3,7 @@ import { ExternalLink, BarChart3, TrendingUp, Package, DollarSign, ShoppingCart,
 
 const projects = [
   {
-  icon: BarChart3,
+  image: "/gifs/dashboard_vendas.gif",
   title: "Dashboard Vendas",
   description: "Dashboard interativo de vendas com KPIs estratégicos e visão gerencial para tomada de decisão.",
   tools: ["Power BI", "SQL", "Excel"],
