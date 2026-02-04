@@ -3,11 +3,11 @@ import { ExternalLink, BarChart3, TrendingUp, Package, DollarSign, ShoppingCart,
 
 const projects = [
   {
-    icon: Package,
-    title: "Dashboard Logística",
-    description: "Painel completo para gestão logística com indicadores de performance de entregas, rotas otimizadas e controle de frota.",
-    tools: ["Power BI", "SQL", "Excel"],
-    link: "https://app.powerbi.com/reportEmbed?reportId=dd982cea-eb4b-4da7-bf95-c3e3c139edb2&autoAuth=true&ctid=659ce2b8-0714-4198-8c38-dc9b60aabb57",
+  image: "/gifs/dashboard_vendas.gif",
+  title: "Dashboard Vendas",
+  description: "Dashboard interativo de vendas com KPIs estratégicos e visão gerencial para tomada de decisão.",
+  tools: ["Power BI", "SQL", "Excel"],
+  link: "https://app.powerbi.com/reportEmbed?reportId=dd982cea-eb4b-4da7-bf95-c3e3c139edb2&autoAuth=true&ctid=659ce2b8-0714-4198-8c38-dc9b60aabb57",
   },
   {
     icon: TrendingUp,
