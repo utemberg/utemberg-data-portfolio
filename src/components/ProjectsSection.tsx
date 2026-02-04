@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ExternalLink, BarChart3, TrendingUp, Package, DollarSign, ShoppingCart, FolderKanban } from "lucide-react";
-import dashboardVendasGif from "@/assets/dashboard_vendas.gif";
+import dashboardVendasGif from "@/assets/gifs/dashboard_vendas.gif";
 
 const projects = [
   {
